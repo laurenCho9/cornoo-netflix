@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bs-black);
+  color: var(--bs-white);
+}
+
+// custom className
+.logo {
+  padding: 12px 0;
+  img {
+    max-height: 34px;
+  }
+}
+
+// bootstrap className
+.nav-link {
+  color: var(--bs-gray-400);
+  &:hover {
+    color: var(--bs-white);
+  }
+}
