@@ -6,12 +6,10 @@ function Banner() {
   const { data, isLoading, isError, error } = usePopularMoviesQuery();
   console.log("ddd", data);
   if (isLoading) {
-    <h1>Loading.... </h1>;
-    return;
+    return <h1>Loading.... </h1>;
   }
   if (isError) {
-    <Alert variant="danger">{error.message}</Alert>;
-    return;
+    return <Alert variant="danger">{error.message}</Alert>;
   }
   return (
     <div
