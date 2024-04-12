@@ -1,0 +1,43 @@
+.movie-card {
+  width: 220px;
+  height: 330px;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 16px;
+  &:hover {
+    transform: scale(1.3) translateZ(20px);
+  }
+}
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 41, 41, 0.9);
+  opacity: 0;
+  transition: all 1s;
+  font-weight: bold;
+  overflow-wrap: break-word;
+  padding: 30px 20px;
+  border-radius: 16px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.icons {
+  color: var(--bs-yellow);
+}
+
+.movie-adult {
+  font-style: italic;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
