@@ -1,8 +1,20 @@
 import { Badge } from "react-bootstrap";
 import "./MovieCard.style.scss";
 import { FaStar, FaTrophy } from "react-icons/fa";
+import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
 
 function MovieCard({ movie }) {
+  const { data: genreData } = useMovieGenreQuery();
+
+  const showGenre = (genreIdList) => {
+    if (!genreData) return [];
+    const genreNameList = genreIdList.map((id) => {
+      const genreObj = genreData.find((genre) => genre.id === id);
+      return genreObj.name;
+    });
+    return genreNameList;
+  };
+
   return (
     <div
       style={{
@@ -16,7 +28,7 @@ function MovieCard({ movie }) {
       <div className="overlay">
         <div>
           <h2>{movie.title}</h2>
-          {movie.genre_ids.map((id) => (
+          {showGenre(movie.genre_ids).map((id) => (
             <Badge bg="danger" key={id}>
               {id}
             </Badge>
