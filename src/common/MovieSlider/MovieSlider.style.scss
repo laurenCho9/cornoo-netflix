@@ -1,6 +1,12 @@
 .carousel-container-title {
   padding-top: 5.4rem;
 }
+@media screen and (max-width: 464px) {
+  .carousel-container-title {
+    padding-top: 4.4rem;
+    padding-left: 18px;
+  }
+}
 
 .carousel-container {
   overflow: hidden;
