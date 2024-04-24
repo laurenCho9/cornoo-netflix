@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Outlet, useNavigate } from "react-router-dom";
+import "./AppLayout.style.scss";
 
 function AppLayout() {
   const [keyword, setKeyword] = useState("");
