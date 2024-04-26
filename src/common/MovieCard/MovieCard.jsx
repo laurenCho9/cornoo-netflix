@@ -2,6 +2,7 @@ import { Badge } from "react-bootstrap";
 import "./MovieCard.style.scss";
 import { FaStar, FaTrophy } from "react-icons/fa";
 import { useMovieGenreQuery } from "../../hooks/useMovieGenre";
+import { useNavigate } from "react-router-dom";
 
 function MovieCard({ movie }) {
   const { data: genreData } = useMovieGenreQuery();
@@ -15,6 +16,13 @@ function MovieCard({ movie }) {
     return genreNameList;
   };
 
+  const navigate = useNavigate();
+
+  const movieDetailPage = () => {
+    navigate(`/movies/${movie.id}`);
+    window.scrollTo(0, 0); // 최상단으로 이동되는 경로 추가
+  };
+
   return (
     <div
       style={{
@@ -24,6 +32,7 @@ function MovieCard({ movie }) {
           ")",
       }}
       className="movie-card"
+      onClick={movieDetailPage}
     >
       <div className="overlay">
         <div>
