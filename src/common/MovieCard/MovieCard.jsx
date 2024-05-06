@@ -28,7 +28,7 @@ function MovieCard({ movie }) {
       style={{
         backgroundImage:
           "url(" +
-          `https://image.tmdb.org/t/p/w600_and_h900_bestv2${movie.poster_path}` +
+          `https://www.themoviedb.org/t/p/w300_and_h450_bestv2${movie.poster_path}` +
           ")",
       }}
       className="movie-card"
@@ -45,11 +45,11 @@ function MovieCard({ movie }) {
         </div>
         <div>
           <div className="align-center">
-            <FaStar className="icons" />
+            <FaStar className="icons-yellow" />
             {movie.vote_average}
           </div>
           <div className="align-center">
-            <FaTrophy className="icons" />
+            <FaTrophy className="icons-yellow" />
             {movie.popularity}
           </div>
           <div

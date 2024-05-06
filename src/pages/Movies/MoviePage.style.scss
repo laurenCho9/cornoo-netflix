@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  .page-link {
+    color: var(--bs-red);
+    &:hover {
+      color: var(--bs-black);
+    }
+  }
+  .active > .page-link,
+  .page-link.active {
+    background-color: var(--bs-red) !important;
+    border-color: var(--bs-red) !important;
+    color: var(--bs-white);
+  }
+}

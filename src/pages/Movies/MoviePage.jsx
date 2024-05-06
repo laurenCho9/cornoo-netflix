@@ -4,6 +4,7 @@ import { Col, Container, Row, Spinner } from "react-bootstrap";
 import MovieCard from "../../common/MovieCard/MovieCard";
 import ReactPaginate from "react-paginate";
 import { useState } from "react";
+import "./MoviePage.style.scss";
 
 function MoviePage() {
   const [query, setQuery] = useSearchParams();
@@ -38,13 +39,15 @@ function MoviePage() {
   return (
     <Container>
       <Row>
-        <Col lg={4} xs={12}>
+        {/* <Col lg={4} xs={12}>
           필터
-        </Col>
-        <Col lg={8} xs={12}>
+        </Col> */}
+        {/* <Col lg={8} xs={12}> */}
+        <Col>
           <Row>
             {data?.results.map((movie, index) => (
-              <Col key={index} lg={4} xs={12}>
+              // <Col key={index} lg={4} xs={12}>
+              <Col>
                 <MovieCard movie={movie} />
               </Col>
             ))}
