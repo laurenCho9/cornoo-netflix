@@ -1,7 +1,6 @@
-import { Col, Row } from "react-bootstrap";
+import { Badge, Col, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useMovieDetail } from "../../hooks/useMovieDatails";
-import { useMovieGenreDetailQuery } from "../../hooks/useMovieGenreDetails";
 import "./MovieDetail.style.scss";
 import "../../common/MovieCard/MovieCard";
 import {
@@ -12,18 +11,7 @@ import {
   FaCoins,
 } from "react-icons/fa";
 
-function MovieDetailPage({ movie }) {
-  const { data: genreDetailData } = useMovieGenreDetailQuery();
-
-  const showGenre = (genreIdList) => {
-    if (!genreDetailData) return [];
-    const genreNameList = genreIdList.map((id) => {
-      const genreObj = genreDetailData.find((genre) => genre.id === id);
-      return genreObj ? genreObj.name : "";
-    });
-    return genreNameList;
-  };
-
+function MovieDetailPage() {
   let params = useParams();
   const { data, isLoading, isError, error } = useMovieDetail(params);
   console.log("poster", data);
@@ -58,22 +46,13 @@ function MovieDetailPage({ movie }) {
             ></div>
           </Col>
           <Col className="movie-detail-align last-bottom">
-            {/* <p> */}
-            {/* 영화 장르 : */}
-            {/* {data?.genres.id} */}
-            {console.log(
-              "영화장르",
-              "name",
-              data?.genres.name,
-              "id",
-              data?.genres.id
-            )}
-            {/* {showGenre(data?.genres).map((name) => (
+            <p>
+              {data?.genres.map((item, id) => (
                 <Badge bg="danger" key={id}>
-                  {name}
+                  {item.name}
                 </Badge>
-              ))} */}
-            {/* </p> */}
+              ))}
+            </p>
             <h1>{data?.title}</h1>
             <p className="overview">{data?.overview}</p>
             <p className="align-center">
