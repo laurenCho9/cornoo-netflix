@@ -32,7 +32,7 @@ function AppLayout() {
               navbarScroll
             >
               <Nav.Link href="/">Home</Nav.Link>
-              {/* <Nav.Link href="/movies">Movies</Nav.Link> */}
+              <Nav.Link href="/movies">Movies</Nav.Link>
             </Nav>
             <Form className="d-flex" onSubmit={searchByKeyword}>
               <Form.Control
