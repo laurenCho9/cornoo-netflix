@@ -21,13 +21,13 @@ function AppLayout() {
     <>
       <Navbar expand="lg" bg="black">
         <Container fluid>
-          <Navbar.Brand href="/" className="logo">
-            <img src="../assets/logo.png" />
+          <Navbar.Brand href="/" className="logo nav-pd">
+            {/* <img src="/logo.png" /> */}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
-              className="me-auto my-2 my-lg-0 logo"
+              className="me-auto my-2 my-lg-0 nav-pd"
               style={{ maxHeight: "100px" }}
               navbarScroll
             >

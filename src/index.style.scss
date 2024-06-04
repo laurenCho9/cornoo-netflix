@@ -10,18 +10,25 @@ body {
 }
 
 // custom className
-.logo {
+// .logo {
+//   padding: 12px 0;
+//   img {
+//     max-height: 34px;
+//   }
+// }
+.nav-pd {
   padding: 12px 0;
-  img {
-    max-height: 34px;
-  }
+}
+.logo {
+  background-image: url("./assets/logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100.97px;
+  height: 34px;
 }
 @media screen and (max-width: 464px) {
-  .logo {
+  .nav-pd {
     padding: 12px 6px;
-    img {
-      max-height: 34px;
-    }
   }
 }
 
