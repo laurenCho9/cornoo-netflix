@@ -22,7 +22,7 @@ function AppLayout() {
       <Navbar expand="lg" bg="black">
         <Container fluid>
           <Navbar.Brand href="/" className="logo">
-            <img src="/logo.png" />
+            <img src="../assets/logo.png" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
